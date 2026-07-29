@@ -18,6 +18,7 @@ function MovieCard({ movie }) {
 
   return (
     <Link to={`/movie/${movie.id}`} className="movie-card">
+      
       <div className="movie-poster">
         <img
           src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
@@ -34,6 +35,9 @@ function MovieCard({ movie }) {
       </div>
       <div className="movie-info">
         <h3>{movie.title}</h3>
+        {movie.original_title !== movie.title && (
+          <h4 className="movie-subtitle">{movie.original_title}</h4>
+        )}
         <p>{movie.release_date?.split("-")[0]}</p>
       </div>
     </Link>

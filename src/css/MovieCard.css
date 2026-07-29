@@ -47,6 +47,20 @@
 .movie-card:hover .movie-overlay {
   opacity: 1;
 }
+.movie-subtitle{
+  font-size: 0.85rem;
+  color: #aaa;
+  font-weight: 400;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.movie-release-date{
+  color: #777;
+  font-size: 0.8rem;
+  margin: 0;
+}
 
 .favorite-btn {
   position: absolute;
