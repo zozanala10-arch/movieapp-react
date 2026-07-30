@@ -45,3 +45,23 @@
     padding: 0.5rem;
   }
 }
+.lang-toggle-btn{
+  background-color:  rgba(255, 255, 255, 0.1); 
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-left: 1rem;
+}
+.lang-toggle-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+[dir="rtl"] .lang-toggle-btn {
+  margin-left: 0;
+  margin-right: 1rem;
+}
