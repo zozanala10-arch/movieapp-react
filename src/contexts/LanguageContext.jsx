@@ -24,7 +24,15 @@ const translation = {
     error: "Error",
     footerDesc: "Your ultimate destination for movie details, ratings, and saving your favorites.",
     followUs: "Follow Us",
-    rights: "All rights reserved."
+    rights: "All rights reserved.",
+    headerTitle: "Find Your Next Story",
+    headerSubtitle: "Explore thousands of movies, keep track of your favorites, and search by genre.",
+    catTrending: "Trending",
+    catAction: "Action",
+    catComedy: "Comedy",
+    catDrama: "Drama",
+    catSciFi: "Sci-Fi",
+    
   },
   ar: {
     appName: "تطبيق الأفلام",
@@ -47,7 +55,14 @@ const translation = {
     error: "خطأ",
     footerDesc: "وجهتك النهائية للحصول على تفاصيل الأفلام، والتقييمات، وحفظ أفلامك المفضلة.",
     followUs: "تابعنا",
-    rights: "جميع الحقوق محفوظة."
+    rights: "جميع الحقوق محفوظة.",
+    headerTitle: "ابحث عن قصتك التالية",
+    headerSubtitle: "استكشف آلاف الأفلام، وتابع أفلامك المفضلة، وابحث حسب التصنيف.",
+    catTrending: "الشائع",
+    catAction: "أكشن",
+    catComedy: "كوميدي",
+    catDrama: "دراما",
+    catSciFi: "خيال علمي",
   }
 };
 
