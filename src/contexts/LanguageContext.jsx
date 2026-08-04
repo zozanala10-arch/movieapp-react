@@ -32,7 +32,10 @@ const translation = {
     catComedy: "Comedy",
     catDrama: "Drama",
     catSciFi: "Sci-Fi",
-    
+    watchTrailer: "Watch Trailer",
+    castTitle: "Full Cast",
+    noCast: "No cast members found.",
+    noTrailer: "Trailer not available.",
   },
   ar: {
     appName: "تطبيق الأفلام",
@@ -63,6 +66,10 @@ const translation = {
     catComedy: "كوميدي",
     catDrama: "دراما",
     catSciFi: "خيال علمي",
+    watchTrailer: "شاهد الإعلان",
+    castTitle: "طاقم العمل الكامل",
+    noCast: "لم يتم العثور على ممثلين.",
+    noTrailer: "الإعلان غير متوفر.",
   }
 };
 
