@@ -43,17 +43,18 @@ function Home() {
     { id: "35", name: t("catComedy") },
     { id: "18", name: t("catDrama") },
     { id: "878", name: t("catSciFi") },
-    { id: "27", name: language === "ar" ? "رعب" : "Horror" },
-    { id: "10749", name: language === "ar" ? "رومانسي" : "Romance" },
-    { id: "53", name: language === "ar" ? "إثارة" : "Thriller" },
+    { id: "27", name: language === "ar" ? "رعب" : language === "ckb" ? "ترسناک" : "Horror" },
+    { id: "10749", name: language === "ar" ? "رومانسي" : language === "ckb" ? "رۆمانسی" : "Romance" },
+    { id: "53", name: language === "ar" ? "إثارة" : language === "ckb" ? "پڕ لە جۆش" : "Thriller" },
   ];
 
   const langList = [
-    { code: "en", name: language === "ar" ? "الإنجليزية" : "English" },
-    { code: "ar", name: language === "ar" ? "العربية" : "Arabic" },
-    { code: "es", name: language === "ar" ? "الإسبانية" : "Spanish" },
-    { code: "fr", name: language === "ar" ? "الفرنسية" : "French" },
-    { code: "ja", name: language === "ar" ? "اليابانية" : "Japanese" },
+    { code: "en", name: language === "ar" ? "الإنجليزية" : language === "ckb" ? "ئینگلیزی" : "English" },
+    { code: "ar", name: language === "ar" ? "العربية" : language === "ckb" ? "عەرەبی" : "Arabic" },
+    { code: "ckb", name: language === "ar" ? "الكردية" : language === "ckb" ? "کوردی" : "Kurdish" },
+    { code: "es", name: language === "ar" ? "الإسبانية" : language === "ckb" ? "ئیسپانی" : "Spanish" },
+    { code: "fr", name: language === "ar" ? "الفرنسية" : language === "ckb" ? "فەرەنسی" : "French" },
+    { code: "ja", name: language === "ar" ? "اليابانية" : language === "ckb" ? "یابانی" : "Japanese" },
   ];
 
   // Fetch banner movies (top 5 trending)
@@ -196,7 +197,7 @@ function Home() {
                 <p className="hero-slide-overview">{movie.overview}</p>
                 <div className="hero-slide-actions">
                   <button className="slide-play-btn" onClick={() => handlePlayTrailer(movie.id)}>
-                    ▶ {language === "ar" ? "شاهد الإعلان" : "Play Trailer"}
+                    ▶ {language === "ar" ? "شاهد الإعلان" : language === "ckb" ? "بینینی تڕایلەر" : "Play Trailer"}
                   </button>
                 </div>
               </div>
@@ -354,7 +355,7 @@ function Home() {
       {searchQuery.trim() && (
         <div className="search-results-info">
           <button onClick={handleClearSearch} className="clear-search-btn">
-            &larr; {language === "ar" ? "العودة إلى التصنيفات" : "Back to Categories"}
+            &larr; {language === "ar" ? "العودة إلى التصنيفات" : language === "ckb" ? "گەڕانەوە بۆ جۆرەکان" : "Back to Categories"}
           </button>
         </div>
       )}

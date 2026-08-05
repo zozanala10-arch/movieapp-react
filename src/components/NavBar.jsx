@@ -18,12 +18,15 @@ function NavBar() {
           {t("favorites")}
         </Link>
 
-        <button
-          className="lang-toggle-btn"
-          onClick={() => setLanguage(language === "en" ? "ar" : "en")}
+        <select
+          className="lang-select-btn"
+          value={language}
+          onChange={(e) => setLanguage(e.target.value)}
         >
-          {language === "en" ? "العربية" : "English"}
-        </button>
+          <option value="en">English</option>
+          <option value="ar">العربية</option>
+          <option value="ckb">کوردی</option>
+        </select>
       </div>
     </nav>
   );

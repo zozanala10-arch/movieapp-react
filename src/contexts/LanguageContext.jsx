@@ -3,8 +3,8 @@ import { createContext, useState, useContext, useEffect } from "react";
 const LanguageContext = createContext();
 
 const translation = {
-  en : {
-    appName: "Movie App",  
+  en: {
+    appName: "Movie App",
     home: "Home",
     favorites: "Favorites",
     searchPlaceholder: "Search for movies...",
@@ -100,6 +100,55 @@ const translation = {
     btnReset: "إعادة ضبط",
     allLangs: "جميع اللغات",
     allGenres: "جميع التصنيفات",
+  },
+  ckb: {
+    appName: "ئەپی فیلمەکان",
+    home: "سەرەتا",
+    favorites: "دڵخوازەکان",
+    searchPlaceholder: "گەڕان بۆ فیلمەکان...",
+    searchBtn: "گەڕان",
+    loading: "بارکردن...",
+    errorLoad: "شکستی هێنا لە بارکردنی فیلمەکان...",
+    errorSearch: "شکستی هێنا لە گەڕانی فیلمەکان...",
+    yourFavorites: "فیلمە دڵخوازەکانت",
+    noFavorites: "هیچ فیلمێکی دڵخواز نییە تا ئێستا",
+    favoritesDesc: "دەست بکە بە زیادکردنی فیلمەکان بۆ دڵخوازەکانت و لێرە دەردەکەون",
+    backBrowse: "← گەڕانەوە بۆ گەڕان",
+    rating: "پلەبەندی:",
+    overview: "پوختەی فیلمەکە",
+    loadingDetails: "بارکردنی زانیارییەکان...",
+    movieNotFound: "فیلمەکە نەدۆزرایەوە",
+    backHome: "گەڕانەوە بۆ سەرەتا",
+    error: "هەڵە",
+    footerDesc: "ئامانجی سەرەکیت بۆ زانیاری فیلمەکان، پلەبەندییەکان، و هەڵگرتنی فیلمە دڵخوازەکانت.",
+    followUs: "شوێنکەوتنمان بکە",
+    rights: "هەموو مافەکان پارێزراون.",
+    headerTitle: "چیرۆکی داهاتووت بدۆزەرەوە",
+    headerSubtitle: "گەڕان بکە لە نێوان هەزاران فیلم، فیلمە دڵخوازەکانت هەڵبگرە، و بەپێی جۆر گەڕان بکە.",
+    catTrending: "بەناوبانگ",
+    catAction: "ئەکشن",
+    catComedy: "کۆمیدی",
+    catDrama: "دراما",
+    catSciFi: "زانستی خەیالی",
+    watchTrailer: "بینینی تڕایلەر",
+    castTitle: "ئەکتەرەکان",
+    noCast: "هیچ ئەکتەرێک نەدۆزرایەوە.",
+    noTrailer: "تڕایلەر بەردەست نییە.",
+    advFilters: "فلتەری پێشکەوتوو",
+    hideFilters: "شاردنەوەی فلتەر",
+    filterGenre: "جۆری فیلم",
+    filterLang: "زمانی ڕەسەن",
+    filterFrom: "مێژووی دەرچوون لە",
+    filterTo: "مێژووی دەرچوون تا",
+    filterRating: "کەمترین پلەبەندی",
+    filterSort: "ڕێکخستن بەپێی",
+    sortPop: "بەناوبانگی",
+    sortRating: "بەرزترین پلەبەندی",
+    sortDate: "نوێترین",
+    btnApply: "جێبەجێکردنی فلتەر",
+    btnReset: "پاککردنەوە",
+    allLangs: "هەموو زمانەکان",
+    allGenres: "هەموو جۆرەکان",
   }
 };
 
@@ -114,7 +163,7 @@ export function LanguageProvider({ children }) {
   };
 
   useEffect(() => {
-    document.documentElement.dir = language === "ar" ? "rtl" : "ltr";
+    document.documentElement.dir = (language === "ar" || language === "ckb") ? "rtl" : "ltr";
     document.documentElement.lang = language;
   }, [language]);
 
